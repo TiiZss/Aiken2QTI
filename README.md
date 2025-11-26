@@ -7,6 +7,8 @@
 [![GitHub Issues](https://img.shields.io/github/issues/TiiZss/Aiken2QTI)](https://github.com/TiiZss/Aiken2QTI/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/TiiZss/Aiken2QTI)](https://github.com/TiiZss/Aiken2QTI/stargazers)
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=AC5N3XX2KGY2S&no_recurring=0&item_name=Seguir+con+el+desarrollo+de+la+herramienta&currency_code=EUR)
+
 Conversor de archivos Aiken a paquetes QTI 2.1 para importar en LMS (Canvas, Blackboard, Moodle, etc.)
 
 > **🎯 Estado:** Listo para producción | **🔧 Versión:** 2.0.0 | **📅 Actualizado:** Noviembre 2025
