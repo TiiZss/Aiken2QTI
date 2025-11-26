@@ -9,6 +9,8 @@
 
 Conversor de archivos Aiken a paquetes QTI 2.1 para importar en LMS (Canvas, Blackboard, Moodle, etc.)
 
+> **🎯 Estado:** Listo para producción | **🔧 Versión:** 2.0.0 | **📅 Actualizado:** Noviembre 2025
+
 ## Características
 
 - Convierte archivos de texto en formato Aiken a paquetes QTI 2.1 estándar
