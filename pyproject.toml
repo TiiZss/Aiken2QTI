@@ -1,3 +1,21 @@
+[project]
+name = "aiken2qti"
+version = "2.1.0"
+description = "Conversor de archivos Aiken a paquetes QTI 2.1 para importar en LMS (Canvas, Blackboard, Moodle, etc.)"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "click>=8.0.0",
+    "lxml>=4.9.0",
+]
+authors = [
+    {name = "TiiZss", email = "tiizss@example.com"}
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 # Configuración para Black (formateador de código)
 [tool.black]
 line-length = 88
@@ -74,3 +92,11 @@ strict_equality = true
 [[tool.mypy.overrides]]
 module = "tests.*"
 disallow_untyped_defs = false
+
+[dependency-groups]
+dev = [
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+]

@@ -6,12 +6,13 @@
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![GitHub Issues](https://img.shields.io/github/issues/TiiZss/Aiken2QTI)](https://github.com/TiiZss/Aiken2QTI/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/TiiZss/Aiken2QTI)](https://github.com/TiiZss/Aiken2QTI/stargazers)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-donate-yellow.svg)](https://www.buymeacoffee.com/TiiZss)
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=AC5N3XX2KGY2S&no_recurring=0&item_name=Seguir+con+el+desarrollo+de+la+herramienta&currency_code=EUR)
 
 Conversor de archivos Aiken a paquetes QTI 2.1 para importar en LMS (Canvas, Blackboard, Moodle, etc.)
 
-> **🎯 Estado:** Listo para producción | **🔧 Versión:** 2.0.0 | **📅 Actualizado:** Noviembre 2025
+> **🎯 Estado:** Listo para producción | **🔧 Versión:** 2.1.0 | **📅 Actualizado:** Febrero 2026
 
 ## Características
 
@@ -22,98 +23,58 @@ Conversor de archivos Aiken a paquetes QTI 2.1 para importar en LMS (Canvas, Bla
 - Soporte completo para preguntas con múltiples opciones
 - Identificadores únicos para evitar conflictos
 
-## 🚀 Instalación Rápida
+### Requisitos previos
 
-### Instalación automática (recomendada)
+- Tener instalado [uv](https://github.com/astral-sh/uv) (El gestor de paquetes de Python moderno)
 
-**Windows (PowerShell):**
-```powershell
-git clone https://github.com/TiiZss/Aiken2QTI.git
-cd Aiken2QTI
-python setup.py --dev
-.\activate.ps1
-```
+### Instalación y Uso
 
-**Windows (CMD):**
-```cmd
-git clone https://github.com/TiiZss/Aiken2QTI.git
-cd Aiken2QTI
-python setup.py --dev
-activate.bat
-```
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/TiiZss/Aiken2QTI.git
+   cd Aiken2QTI
+   ```
 
-**Linux/macOS:**
-```bash
-git clone https://github.com/TiiZss/Aiken2QTI.git
-cd Aiken2QTI
-python setup.py --dev
-source venv/bin/activate
-```
+2. Sincronizar dependencias:
+   ```bash
+   uv sync
+   ```
 
-### Instalación manual
-
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/TiiZss/Aiken2QTI.git
-cd Aiken2QTI
-```
-
-### 2. Crear entorno virtual
-```bash
-python -m venv venv
-```
-
-### 3. Activar entorno virtual
-**Windows (PowerShell):**
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-**Windows (CMD):**
-```cmd
-venv\Scripts\activate.bat
-```
-
-**Linux/macOS:**
-```bash
-source venv/bin/activate
-```
-
-### 4. Instalar dependencias
-```bash
-pip install -r requirements.txt
-```
+3. Ejecutar el script:
+   ```bash
+   uv run aiken2qti.py --help
+   ```
 
 ## 💡 Uso
 
 ### Crear archivo de ejemplo
 ```bash
-python aiken2qti.py --create-sample mis_preguntas.txt
+uv run aiken2qti.py --create-sample mis_preguntas.txt
 ```
 
 ### Uso básico
 ```bash
-python aiken2qti.py archivo_preguntas.txt
+uv run aiken2qti.py archivo_preguntas.txt
 ```
 
 ### Especificar archivo de salida
 ```bash
-python aiken2qti.py archivo_preguntas.txt -o mi_examen.zip
+uv run aiken2qti.py archivo_preguntas.txt -o mi_examen.zip
 ```
 
 ### Validar archivo sin convertir
 ```bash
-python aiken2qti.py archivo_preguntas.txt --validate-only
+uv run aiken2qti.py archivo_preguntas.txt --validate-only
 ```
 
 ### Modo verbose (para debugging)
 ```bash
-python aiken2qti.py archivo_preguntas.txt --verbose
+uv run aiken2qti.py archivo_preguntas.txt --verbose
 ```
 
 ### Ver ayuda completa
 ```bash
-python aiken2qti.py --help
+uv run aiken2qti.py --help
 ```
 
 ### Ejemplo de archivo Aiken
@@ -145,43 +106,30 @@ ANSWER: C
 
 ### Setup del entorno de desarrollo
 ```bash
-python setup.py --dev  # Instala dependencias de desarrollo
+uv sync --dev
 ```
 
-### Herramientas de desarrollo (script automatizado)
-```bash
-# Verificación completa
-python dev.py --all
-
-# Herramientas individuales
-python dev.py --format      # Formatear código
-python dev.py --lint        # Análisis de código
-python dev.py --type-check  # Verificación de tipos
-python dev.py --test        # Ejecutar pruebas
-python dev.py --coverage    # Pruebas con cobertura
-```
-
-### Comandos individuales
+### Comandos de desarrollo
 
 #### Ejecutar tests
 ```bash
-pytest test_aiken2qti.py -v
+uv run pytest test_aiken2qti.py -v
 ```
 
 #### Formatear código
 ```bash
-black aiken2qti.py
+uv run black aiken2qti.py
 ```
 
 #### Análisis de código
 ```bash
-flake8 aiken2qti.py --max-line-length=88
-mypy aiken2qti.py
+uv run flake8 aiken2qti.py --max-line-length=88
+uv run mypy aiken2qti.py
 ```
 
 #### Cobertura de tests
 ```bash
-pytest test_aiken2qti.py --cov=aiken2qti --cov-report=html
+uv run pytest test_aiken2qti.py --cov=aiken2qti --cov-report=html
 ```
 
 ## Contribuciones

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-02-12
+
+### Changed
+- Migrated dependency management to `uv`.
+- Replaced `requirements.txt` and `setup.py` with `pyproject.toml` configuration.
+- Updated documentation for `uv` usage.
+
+### Added
+- BuyMeACoffee badge to README.
+
 ## [2.0.0] - 2025-11-26
 
 ### Added

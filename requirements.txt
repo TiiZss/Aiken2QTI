@@ -1,9 +1,0 @@
-# Dependencias principales
-lxml>=4.9.0
-pytest>=7.0.0
-click>=8.0.0
-
-# Dependencias de desarrollo (opcional)
-black>=22.0.0
-flake8>=5.0.0
-mypy>=1.0.0
